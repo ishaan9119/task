@@ -1,5 +1,5 @@
 FROM ubuntu
-WORKDIR /app
+WORKDIR /microservice
 RUN apt update -y && apt install default-jre -y
-COPY helloworld.class .
-CMD ["java","helloworld"]
+COPY HelloWorld.class /var/lib/jenkins/workspace/java/microservice
+CMD ["java","HelloWorld"]
